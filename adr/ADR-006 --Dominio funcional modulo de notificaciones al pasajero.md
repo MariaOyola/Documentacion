@@ -1,4 +1,4 @@
-# ADR-001 — índice parcial para tier activo único y ruta maestra en flight
+# ADR-006 — índice parcial para tier activo único y ruta maestra en flight
 
 ## Estado 
    Implementado

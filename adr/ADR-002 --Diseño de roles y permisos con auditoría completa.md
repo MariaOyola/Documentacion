@@ -1,4 +1,4 @@
-# ADR-001 — Diseño de roles y permisos con auditoría completa
+# ADR-002 — Diseño de roles y permisos con auditoría completa
 
 ## Estado 
 Implementado

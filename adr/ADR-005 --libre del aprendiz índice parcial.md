@@ -1,4 +1,4 @@
-# ADR-001 — Dominio funcional: módulo de notificaciones al pasajero
+# ADR-005 — Dominio funcional: módulo de notificaciones al pasajero
 
 ## Estado 
     Propuesta (no se ha realizado)
