@@ -1,7 +1,7 @@
 # ADR-004 — Estrategia de versionamiento con ramas develop, qa y main
 
 ## Estado 
-    Propuesta
+    Implementado
 
 ## Fecha
 2026-04-14

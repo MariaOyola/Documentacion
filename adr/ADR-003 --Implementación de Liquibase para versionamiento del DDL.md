@@ -1,7 +1,7 @@
 # ADR-003 — Implementación de Liquibase para versionamiento del DDL 
 
 ## Estado 
-    Propuesta
+    Implementado
 
 ## Fecha
 2026-04-14
