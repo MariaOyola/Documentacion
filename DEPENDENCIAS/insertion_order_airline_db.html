@@ -1,0 +1,303 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-sans)}
+.wrap{padding:1rem 0}
+.legend{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:14px;font-size:12px;color:var(--color-text-secondary)}
+.leg-item{display:flex;align-items:center;gap:5px}
+.leg-dot{width:10px;height:10px;border-radius:3px;flex-shrink:0}
+.level-block{margin-bottom:12px}
+.level-header{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.level-num{font-size:11px;font-weight:500;color:var(--color-text-tertiary);min-width:52px}
+.level-label{font-size:12px;color:var(--color-text-secondary)}
+.cards{display:flex;flex-wrap:wrap;gap:6px}
+.card{border-radius:6px;padding:5px 10px;font-size:12px;font-weight:500;cursor:pointer;transition:opacity .15s;border:1px solid transparent;line-height:1.4}
+.card:hover{opacity:.75}
+.card .sub{font-size:10px;font-weight:400;opacity:.75;margin-top:1px}
+
+.d1{background:#EAF3DE;color:#3B6D11;border-color:#C0DD97}
+.d2{background:#E1F5EE;color:#0F6E56;border-color:#9FE1CB}
+.d3{background:#E6F1FB;color:#185FA5;border-color:#B5D4F4}
+.d4{background:#EEEDFE;color:#3C3489;border-color:#AFA9EC}
+.d5{background:#FAEEDA;color:#854F0B;border-color:#FAC775}
+.d6{background:#FAECE7;color:#993C1D;border-color:#F5C4B3}
+.d7{background:#FBEAF0;color:#99355 6;border-color:#F4C0D1}
+.d8{background:#F1EFE8;color:#5F5E5A;border-color:#D3D1C7}
+.d9{background:#FAEEDA;color:#633806;border-color:#EF9F27}
+.d10{background:#E1F5EE;color:#085041;border-color:#5DCAA5}
+.d11{background:#FCEBEB;color:#A32D2D;border-color:#F7C1C1}
+
+@media(prefers-color-scheme:dark){
+  .d1{background:#173404;color:#C0DD97;border-color:#3B6D11}
+  .d2{background:#04342C;color:#9FE1CB;border-color:#0F6E56}
+  .d3{background:#042C53;color:#B5D4F4;border-color:#185FA5}
+  .d4{background:#26215C;color:#CECBF6;border-color:#534AB7}
+  .d5{background:#412402;color:#FAC775;border-color:#854F0B}
+  .d6{background:#4A1B0C;color:#F5C4B3;border-color:#993C1D}
+  .d7{background:#4B1528;color:#F4C0D1;border-color:#993556}
+  .d8{background:#2C2C2A;color:#D3D1C7;border-color:#5F5E5A}
+  .d9{background:#412402;color:#EF9F27;border-color:#633806}
+  .d10{background:#04342C;color:#5DCAA5;border-color:#085041}
+  .d11{background:#501313;color:#F7C1C1;border-color:#A32D2D}
+}
+
+.divider{border:none;border-top:1px solid var(--color-border-tertiary);margin:10px 0}
+.note{font-size:11px;color:var(--color-text-tertiary);margin-top:4px;padding-left:60px}
+.exec-num{display:inline-block;background:var(--color-background-secondary);border:1px solid var(--color-border-tertiary);border-radius:4px;font-size:10px;font-weight:500;color:var(--color-text-tertiary);padding:1px 5px;min-width:24px;text-align:center}
+</style>
+<div class="wrap">
+<div class="legend">
+  <div class="leg-item"><div class="leg-dot d1"></div> Geografía</div>
+  <div class="leg-item"><div class="leg-dot d2"></div> Moneda</div>
+  <div class="leg-item"><div class="leg-dot d3"></div> Aerolínea</div>
+  <div class="leg-item"><div class="leg-dot d4"></div> Identidad / Seguridad</div>
+  <div class="leg-item"><div class="leg-dot d5"></div> Lealtad</div>
+  <div class="leg-item"><div class="leg-dot d6"></div> Aeropuerto / Aeronave</div>
+  <div class="leg-item"><div class="leg-dot d8"></div> Operación de vuelo</div>
+  <div class="leg-item"><div class="leg-dot d9"></div> Ventas / Reservas</div>
+  <div class="leg-item"><div class="leg-dot d10"></div> Abordaje</div>
+  <div class="leg-item"><div class="leg-dot d11"></div> Pago / Facturación</div>
+</div>
+
+<!-- NIVEL 1 -->
+<div class="level-block">
+  <div class="level-header">
+    <span class="level-num">Nivel 1</span>
+    <span class="level-label">Tablas raíz — sin dependencias externas</span>
+  </div>
+  <div class="cards">
+    <div class="card d1"><span class="exec-num">1</span> time_zone<div class="sub">Zona horaria base</div></div>
+    <div class="card d1"><span class="exec-num">2</span> continent<div class="sub">Catálogo de continentes</div></div>
+    <div class="card d2"><span class="exec-num">3</span> currency<div class="sub">Monedas ISO 4217</div></div>
+    <div class="card d4"><span class="exec-num">4</span> person_type<div class="sub">Tipos de persona</div></div>
+    <div class="card d4"><span class="exec-num">5</span> document_type<div class="sub">Tipos de documento</div></div>
+    <div class="card d4"><span class="exec-num">6</span> contact_type<div class="sub">Tipos de contacto</div></div>
+    <div class="card d4"><span class="exec-num">7</span> user_status<div class="sub">Estados de usuario</div></div>
+    <div class="card d4"><span class="exec-num">8</span> security_role<div class="sub">Roles del sistema</div></div>
+    <div class="card d4"><span class="exec-num">9</span> security_permission<div class="sub">Permisos del sistema</div></div>
+    <div class="card d5"><span class="exec-num">10</span> customer_category<div class="sub">Categorías de cliente</div></div>
+    <div class="card d5"><span class="exec-num">11</span> benefit_type<div class="sub">Tipos de beneficio</div></div>
+    <div class="card d6"><span class="exec-num">12</span> aircraft_manufacturer<div class="sub">Fabricantes de aeronave</div></div>
+    <div class="card d6"><span class="exec-num">13</span> cabin_class<div class="sub">Clases de cabina</div></div>
+    <div class="card d6"><span class="exec-num">14</span> maintenance_type<div class="sub">Tipos de mantenimiento</div></div>
+    <div class="card d8"><span class="exec-num">15</span> flight_status<div class="sub">Estados de vuelo</div></div>
+    <div class="card d8"><span class="exec-num">16</span> delay_reason_type<div class="sub">Razones de retraso</div></div>
+    <div class="card d9"><span class="exec-num">17</span> reservation_status<div class="sub">Estados de reserva</div></div>
+    <div class="card d9"><span class="exec-num">18</span> sale_channel<div class="sub">Canales de venta</div></div>
+    <div class="card d9"><span class="exec-num">19</span> ticket_status<div class="sub">Estados de ticket</div></div>
+    <div class="card d10"><span class="exec-num">20</span> boarding_group<div class="sub">Grupos de abordaje</div></div>
+    <div class="card d10"><span class="exec-num">21</span> check_in_status<div class="sub">Estados de check-in</div></div>
+    <div class="card d11"><span class="exec-num">22</span> payment_status<div class="sub">Estados de pago</div></div>
+    <div class="card d11"><span class="exec-num">23</span> payment_method<div class="sub">Métodos de pago</div></div>
+    <div class="card d11"><span class="exec-num">24</span> invoice_status<div class="sub">Estados de factura</div></div>
+    <div class="card d11"><span class="exec-num">25</span> tax<div class="sub">Tasas impositivas</div></div>
+  </div>
+</div>
+<div class="divider"></div>
+
+<!-- NIVEL 2 -->
+<div class="level-block">
+  <div class="level-header">
+    <span class="level-num">Nivel 2</span>
+    <span class="level-label">Dependen solo de nivel 1</span>
+  </div>
+  <div class="cards">
+    <div class="card d1"><span class="exec-num">26</span> country<div class="sub">→ continent</div></div>
+    <div class="card d6"><span class="exec-num">27</span> aircraft_model<div class="sub">→ aircraft_manufacturer</div></div>
+    <div class="card d9"><span class="exec-num">28</span> fare_class<div class="sub">→ cabin_class</div></div>
+  </div>
+</div>
+<div class="divider"></div>
+
+<!-- NIVEL 3 -->
+<div class="level-block">
+  <div class="level-header">
+    <span class="level-num">Nivel 3</span>
+    <span class="level-label">Dependen de nivel 2</span>
+  </div>
+  <div class="cards">
+    <div class="card d1"><span class="exec-num">29</span> state_province<div class="sub">→ country</div></div>
+    <div class="card d3"><span class="exec-num">30</span> airline<div class="sub">→ country</div></div>
+    <div class="card d4"><span class="exec-num">31</span> person<div class="sub">→ person_type, country</div></div>
+  </div>
+</div>
+<div class="divider"></div>
+
+<!-- NIVEL 4 -->
+<div class="level-block">
+  <div class="level-header">
+    <span class="level-num">Nivel 4</span>
+    <span class="level-label">Dependen de nivel 3</span>
+  </div>
+  <div class="cards">
+    <div class="card d1"><span class="exec-num">32</span> city<div class="sub">→ state_province, time_zone</div></div>
+    <div class="card d3"><span class="exec-num">33</span> loyalty_program<div class="sub">→ airline, currency</div></div>
+    <div class="card d6"><span class="exec-num">34</span> aircraft<div class="sub">→ airline, aircraft_model</div></div>
+    <div class="card d4"><span class="exec-num">35</span> user_account<div class="sub">→ person, user_status</div></div>
+    <div class="card d4"><span class="exec-num">36</span> person_document<div class="sub">→ person, document_type, country</div></div>
+    <div class="card d4"><span class="exec-num">37</span> person_contact<div class="sub">→ person, contact_type</div></div>
+    <div class="card d5"><span class="exec-num">38</span> customer<div class="sub">→ airline, person, customer_category</div></div>
+  </div>
+</div>
+<div class="divider"></div>
+
+<!-- NIVEL 5 -->
+<div class="level-block">
+  <div class="level-header">
+    <span class="level-num">Nivel 5</span>
+    <span class="level-label">Dependen de nivel 4</span>
+  </div>
+  <div class="cards">
+    <div class="card d1"><span class="exec-num">39</span> district<div class="sub">→ city</div></div>
+    <div class="card d5"><span class="exec-num">40</span> loyalty_tier<div class="sub">→ loyalty_program</div></div>
+    <div class="card d5"><span class="exec-num">41</span> loyalty_account<div class="sub">→ customer, loyalty_program</div></div>
+    <div class="card d4"><span class="exec-num">42</span> user_role<div class="sub">→ user_account, security_role</div></div>
+    <div class="card d4"><span class="exec-num">43</span> role_permission<div class="sub">→ security_role, security_permission</div></div>
+    <div class="card d6"><span class="exec-num">44</span> aircraft_cabin<div class="sub">→ aircraft, cabin_class</div></div>
+    <div class="card d6"><span class="exec-num">45</span> maintenance_provider<div class="sub">→ address (opt.) — ver nota</div></div>
+  </div>
+  <div class="note">⚠ maintenance_provider tiene FK opcional a address. Se puede insertar en nivel 5 sin address, o en nivel 7 si se requiere address.</div>
+</div>
+<div class="divider"></div>
+
+<!-- NIVEL 6 -->
+<div class="level-block">
+  <div class="level-header">
+    <span class="level-num">Nivel 6</span>
+    <span class="level-label">Dependen de nivel 5</span>
+  </div>
+  <div class="cards">
+    <div class="card d1"><span class="exec-num">46</span> address<div class="sub">→ district</div></div>
+    <div class="card d5"><span class="exec-num">47</span> loyalty_account_tier<div class="sub">→ loyalty_account, loyalty_tier</div></div>
+    <div class="card d5"><span class="exec-num">48</span> miles_transaction<div class="sub">→ loyalty_account</div></div>
+    <div class="card d5"><span class="exec-num">49</span> customer_benefit<div class="sub">→ customer, benefit_type</div></div>
+    <div class="card d6"><span class="exec-num">50</span> aircraft_seat<div class="sub">→ aircraft_cabin</div></div>
+  </div>
+</div>
+<div class="divider"></div>
+
+<!-- NIVEL 7 -->
+<div class="level-block">
+  <div class="level-header">
+    <span class="level-num">Nivel 7</span>
+    <span class="level-label">Dependen de nivel 6</span>
+  </div>
+  <div class="cards">
+    <div class="card d6"><span class="exec-num">51</span> airport<div class="sub">→ address</div></div>
+    <div class="card d9"><span class="exec-num">52</span> fare<div class="sub">→ airline, airport(×2), fare_class, currency</div></div>
+  </div>
+</div>
+<div class="divider"></div>
+
+<!-- NIVEL 8 -->
+<div class="level-block">
+  <div class="level-header">
+    <span class="level-num">Nivel 8</span>
+    <span class="level-label">Dependen de nivel 7</span>
+  </div>
+  <div class="cards">
+    <div class="card d6"><span class="exec-num">53</span> terminal<div class="sub">→ airport</div></div>
+    <div class="card d6"><span class="exec-num">54</span> runway<div class="sub">→ airport</div></div>
+    <div class="card d6"><span class="exec-num">55</span> airport_regulation<div class="sub">→ airport</div></div>
+    <div class="card d6"><span class="exec-num">56</span> maintenance_event<div class="sub">→ aircraft, maintenance_type, maintenance_provider</div></div>
+    <div class="card d8"><span class="exec-num">57</span> flight<div class="sub">→ airline, aircraft, flight_status</div></div>
+    <div class="card d9"><span class="exec-num">58</span> reservation<div class="sub">→ customer(opt.), reservation_status, sale_channel</div></div>
+    <div class="card d11"><span class="exec-num">59</span> exchange_rate<div class="sub">→ currency(×2)</div></div>
+  </div>
+</div>
+<div class="divider"></div>
+
+<!-- NIVEL 9 -->
+<div class="level-block">
+  <div class="level-header">
+    <span class="level-num">Nivel 9</span>
+    <span class="level-label">Dependen de nivel 8</span>
+  </div>
+  <div class="cards">
+    <div class="card d6"><span class="exec-num">60</span> boarding_gate<div class="sub">→ terminal</div></div>
+    <div class="card d8"><span class="exec-num">61</span> flight_segment<div class="sub">→ flight, airport(×2)</div></div>
+    <div class="card d9"><span class="exec-num">62</span> reservation_passenger<div class="sub">→ reservation, person</div></div>
+  </div>
+</div>
+<div class="divider"></div>
+
+<!-- NIVEL 10 -->
+<div class="level-block">
+  <div class="level-header">
+    <span class="level-num">Nivel 10</span>
+    <span class="level-label">Dependen de nivel 9</span>
+  </div>
+  <div class="cards">
+    <div class="card d8"><span class="exec-num">63</span> flight_delay<div class="sub">→ flight_segment, delay_reason_type</div></div>
+    <div class="card d9"><span class="exec-num">64</span> sale<div class="sub">→ reservation, currency</div></div>
+  </div>
+</div>
+<div class="divider"></div>
+
+<!-- NIVEL 11 -->
+<div class="level-block">
+  <div class="level-header">
+    <span class="level-num">Nivel 11</span>
+    <span class="level-label">Dependen de nivel 10</span>
+  </div>
+  <div class="cards">
+    <div class="card d9"><span class="exec-num">65</span> ticket<div class="sub">→ sale, reservation_passenger, fare, ticket_status</div></div>
+    <div class="card d11"><span class="exec-num">66</span> payment<div class="sub">→ sale, payment_status, payment_method, currency</div></div>
+    <div class="card d11"><span class="exec-num">67</span> invoice<div class="sub">→ sale, invoice_status, currency</div></div>
+  </div>
+</div>
+<div class="divider"></div>
+
+<!-- NIVEL 12 -->
+<div class="level-block">
+  <div class="level-header">
+    <span class="level-num">Nivel 12</span>
+    <span class="level-label">Dependen de nivel 11</span>
+  </div>
+  <div class="cards">
+    <div class="card d9"><span class="exec-num">68</span> ticket_segment<div class="sub">→ ticket, flight_segment</div></div>
+    <div class="card d11"><span class="exec-num">69</span> payment_transaction<div class="sub">→ payment</div></div>
+    <div class="card d11"><span class="exec-num">70</span> refund<div class="sub">→ payment</div></div>
+    <div class="card d11"><span class="exec-num">71</span> invoice_line<div class="sub">→ invoice, tax</div></div>
+  </div>
+</div>
+<div class="divider"></div>
+
+<!-- NIVEL 13 -->
+<div class="level-block">
+  <div class="level-header">
+    <span class="level-num">Nivel 13</span>
+    <span class="level-label">Dependen de nivel 12</span>
+  </div>
+  <div class="cards">
+    <div class="card d9"><span class="exec-num">72</span> seat_assignment<div class="sub">→ ticket_segment, aircraft_seat</div></div>
+    <div class="card d9"><span class="exec-num">73</span> baggage<div class="sub">→ ticket_segment</div></div>
+    <div class="card d10"><span class="exec-num">74</span> check_in<div class="sub">→ ticket_segment, check_in_status, boarding_group, user_account</div></div>
+  </div>
+</div>
+<div class="divider"></div>
+
+<!-- NIVEL 14 -->
+<div class="level-block">
+  <div class="level-header">
+    <span class="level-num">Nivel 14</span>
+    <span class="level-label">Dependen de nivel 13</span>
+  </div>
+  <div class="cards">
+    <div class="card d10"><span class="exec-num">75</span> boarding_pass<div class="sub">→ check_in</div></div>
+  </div>
+</div>
+<div class="divider"></div>
+
+<!-- NIVEL 15 -->
+<div class="level-block">
+  <div class="level-header">
+    <span class="level-num">Nivel 15</span>
+    <span class="level-label">Tablas hoja — mayor profundidad</span>
+  </div>
+  <div class="cards">
+    <div class="card d10"><span class="exec-num">76</span> boarding_validation<div class="sub">→ boarding_pass, boarding_gate, user_account</div></div>
+  </div>
+</div>
+
+</div>
